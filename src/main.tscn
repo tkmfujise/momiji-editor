@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcavb8xnbit1u"]
+[gd_scene load_steps=4 format=3 uid="uid://bcavb8xnbit1u"]
 
 [ext_resource type="PackedScene" uid="uid://c4um2sg1dyj6c" path="res://addons/redscribe/src/editor/editor.tscn" id="1_eewff"]
+[ext_resource type="FontFile" uid="uid://hp4ljcfknxir" path="res://addons/redscribe/fonts/FiraCode/FiraCode-Regular.ttf" id="2_gh0ne"]
 
 [sub_resource type="CodeHighlighter" id="CodeHighlighter_eewff"]
 number_color = Color(1, 1, 1, 1)
@@ -74,4 +75,5 @@ grow_vertical = 2
 [node name="ReDScribeEditor" parent="." instance=ExtResource("1_eewff")]
 layout_mode = 1
 theme_override_colors/background_color = Color(0.023529412, 0.1254902, 0.21568628, 1)
+theme_override_fonts/font = ExtResource("2_gh0ne")
 syntax_highlighter = SubResource("CodeHighlighter_eewff")
