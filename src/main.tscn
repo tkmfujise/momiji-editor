@@ -1,55 +1,105 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcavb8xnbit1u"]
+[gd_scene load_steps=8 format=3 uid="uid://bcavb8xnbit1u"]
 
 [ext_resource type="Script" uid="uid://c0nm488ecv3yy" path="res://src/main.gd" id="1_5q4o7"]
 [ext_resource type="PackedScene" uid="uid://c4um2sg1dyj6c" path="res://addons/redscribe/src/editor/editor.tscn" id="1_eewff"]
 [ext_resource type="FontFile" uid="uid://hp4ljcfknxir" path="res://addons/redscribe/fonts/FiraCode/FiraCode-Regular.ttf" id="2_gh0ne"]
-[ext_resource type="Resource" uid="uid://gm8n7vbix8im" path="res://themes/momiji_theme.tres" id="4_3cfgd"]
+[ext_resource type="Resource" uid="uid://gm8n7vbix8im" path="res://themes/momiji_light_theme.tres" id="4_3cfgd"]
+[ext_resource type="Resource" uid="uid://do4fee58ai8uy" path="res://themes/momiji_dark_theme.tres" id="5_fyndt"]
 
-[sub_resource type="CodeHighlighter" id="CodeHighlighter_gh0ne"]
-number_color = Color(0, 0, 1, 1)
-symbol_color = Color(0, 0.53333336, 0.53333336, 1)
-function_color = Color(1, 0, 0, 1)
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_fyndt"]
+number_color = Color(1, 0.2784314, 0.21176471, 1)
+symbol_color = Color(0.3019608, 0.69803923, 0.5764706, 1)
+function_color = Color(0.95686275, 0.25882354, 0.58431375, 1)
+member_variable_color = Color(1, 0.2784314, 0.21176471, 1)
 keyword_colors = {
-"begin": Color(1, 0, 1, 1),
-"break": Color(1, 0, 1, 1),
-"case": Color(1, 0, 1, 1),
-"catch": Color(1, 0, 1, 1),
-"class": Color(1, 0, 1, 1),
-"def": Color(1, 0, 1, 1),
-"do": Color(1, 0, 1, 1),
-"else": Color(1, 0, 1, 1),
-"elsif": Color(1, 0, 1, 1),
-"end": Color(1, 0, 1, 1),
-"extend": Color(1, 0, 1, 1),
-"false": Color(1, 0.53333336, 0, 1),
-"for": Color(1, 0, 1, 1),
-"if": Color(1, 0, 1, 1),
-"include": Color(1, 0, 1, 1),
-"initialize": Color(1, 0, 1, 1),
-"module": Color(1, 0, 1, 1),
-"new": Color(1, 0, 1, 1),
-"next": Color(1, 0, 1, 1),
-"nil": Color(1, 0.53333336, 0, 1),
-"prepend": Color(1, 0, 1, 1),
-"raise": Color(1, 0, 1, 1),
-"redo": Color(1, 0, 1, 1),
-"require": Color(1, 0, 1, 1),
-"rescue": Color(1, 0, 1, 1),
-"retry": Color(1, 0, 1, 1),
-"return": Color(1, 0, 1, 1),
-"throw": Color(1, 0, 1, 1),
-"true": Color(1, 0.53333336, 0, 1),
-"unless": Color(1, 0, 1, 1),
-"until": Color(1, 0, 1, 1),
-"using": Color(1, 0, 1, 1),
-"when": Color(1, 0, 1, 1),
-"while": Color(1, 0, 1, 1)
+"begin": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"break": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"case": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"catch": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"class": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"def": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"do": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"else": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"elsif": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"end": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"extend": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"false": Color(0.08235294, 0.7058824, 0.7058824, 1),
+"for": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"if": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"include": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"initialize": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"module": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"new": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"next": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"nil": Color(0.08235294, 0.7058824, 0.7058824, 1),
+"prepend": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"raise": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"redo": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"require": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"rescue": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"retry": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"return": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"throw": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"true": Color(0.08235294, 0.7058824, 0.7058824, 1),
+"unless": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"until": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"using": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"when": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"while": Color(0.92941177, 0.56078434, 0.0627451, 1)
 }
 color_regions = {
-"\" \"": Color(0, 0.53333336, 0, 1),
-"#": Color(0.53333336, 0.53333336, 0.53333336, 1),
-"' '": Color(0, 0.53333336, 0, 1),
-":  ": Color(1, 0.26666668, 0.26666668, 1)
+"\" \"": Color(0.0627451, 0.7490196, 0.015686275, 1),
+"#": Color(0.7411765, 0.654902, 0.5764706, 1),
+"' '": Color(0.0627451, 0.7490196, 0.015686275, 1),
+":  ": Color(1, 0.2784314, 0.21176471, 1)
+}
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_kmhfv"]
+number_color = Color(1, 1, 1, 1)
+symbol_color = Color(1, 0.7058824, 0.06666667, 1)
+function_color = Color(0.9647059, 0.6509804, 1, 1)
+member_variable_color = Color(1, 1, 1, 1)
+keyword_colors = {
+"begin": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"break": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"case": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"catch": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"class": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"def": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"do": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"else": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"elsif": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"end": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"extend": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"false": Color(0.4509804, 1, 1, 1),
+"for": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"if": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"include": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"initialize": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"module": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"new": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"next": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"nil": Color(0.4509804, 1, 1, 1),
+"prepend": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"raise": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"redo": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"require": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"rescue": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"retry": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"return": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"throw": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"true": Color(0.4509804, 1, 1, 1),
+"unless": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"until": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"using": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"when": Color(0.99607843, 0.76862746, 0.5568628, 1),
+"while": Color(0.99607843, 0.76862746, 0.5568628, 1)
+}
+color_regions = {
+"\" \"": Color(0.49411765, 1, 0.45490196, 1),
+"#": Color(0.7411765, 0.654902, 0.5764706, 1),
+"' '": Color(0.49411765, 1, 0.45490196, 1),
+":  ": Color(0.8627451, 1, 0.30588236, 1)
 }
 
 [node name="Main" type="Control"]
@@ -61,6 +111,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5q4o7")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="HBoxContainer" type="HSplitContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -68,15 +128,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-split_offset = 100
 
 [node name="Editor" parent="HBoxContainer" instance=ExtResource("1_eewff")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/background_color = Color(0.75686276, 0.21960784, 0.17254902, 1)
+theme_override_colors/caret_color = Color(1, 0.2784314, 0.21176471, 1)
+theme_override_colors/font_color = Color(0.7647059, 0.1254902, 0.07058824, 1)
+theme_override_colors/background_color = Color(0.9647059, 0.9411765, 0.9098039, 1)
 theme_override_fonts/font = ExtResource("2_gh0ne")
 text = "# Comment
 class Foo
@@ -88,9 +147,24 @@ class Foo
 end
 foo(tset).bar
 123 + 456"
-syntax_highlighter = SubResource("CodeHighlighter_gh0ne")
+syntax_highlighter = SubResource("CodeHighlighter_fyndt")
 current_theme = ExtResource("4_3cfgd")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer"]
+[node name="Editor2" parent="HBoxContainer" instance=ExtResource("1_eewff")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/background_color = Color(0.67058825, 0.16078432, 0.10980392, 1)
+theme_override_fonts/font = ExtResource("2_gh0ne")
+text = "# Comment
+class Foo
+  attr :foo
+  def bar
+    \"test\"
+  end
+  true
+end
+foo(tset).bar
+123 + 456"
+syntax_highlighter = SubResource("CodeHighlighter_kmhfv")
+current_theme = ExtResource("5_fyndt")
