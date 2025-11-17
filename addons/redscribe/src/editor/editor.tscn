@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c4um2sg1dyj6c"]
 
 [ext_resource type="Script" uid="uid://d2wxnoe48t23a" path="res://addons/redscribe/src/editor/editor.gd" id="1_mg613"]
-[ext_resource type="Resource" uid="uid://bgane4ws868g8" path="res://addons/redscribe/data/editor_syntaxes/ruby_syntax.tres" id="2_s6nb6"]
-[ext_resource type="Resource" uid="uid://ckp73hvmxuqqi" path="res://addons/redscribe/data/editor_themes/gessetti_theme.tres" id="3_73q2q"]
+[ext_resource type="Resource" uid="uid://bgane4ws868g8" path="res://data/editor_syntaxes/ruby_syntax.tres" id="2_s6nb6"]
+[ext_resource type="Resource" uid="uid://ckp73hvmxuqqi" path="res://data/editor_themes/gessetti_theme.tres" id="3_73q2q"]
 
 [sub_resource type="CodeHighlighter" id="CodeHighlighter_s6nb6"]
 number_color = Color(1, 1, 1, 1)
