@@ -16,6 +16,6 @@ syntax_colors = {
 "comment": "#BDA793",
 "constant": "#FF4736",
 "keyword": "#ED8F10",
-"string": "#10BF04"
+"string": "#1AB110"
 }
 metadata/_custom_type_script = "uid://dpen4sy4748he"
