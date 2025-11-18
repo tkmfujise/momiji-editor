@@ -115,12 +115,14 @@ oversampling_override = 1.0
 title = "Open a File"
 initial_position = 2
 file_mode = 0
+access = 2
 use_native_dialog = true
 
 [node name="SaveFileDialog" type="FileDialog" parent="."]
 unique_name_in_owner = true
 oversampling_override = 1.0
 initial_position = 2
+access = 2
 use_native_dialog = true
 
 [connection signal="text_changed" from="Editor" to="." method="_on_editor_text_changed"]

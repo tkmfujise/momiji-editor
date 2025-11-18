@@ -1,6 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+.env
 
 dist/*
 !dist/.keep
+
+tmp/*
+!tmp/.keep
