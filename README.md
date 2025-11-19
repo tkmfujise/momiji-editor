@@ -6,4 +6,4 @@
 
 ## Special thanks to
 * https://opengameart.org/content/cute-girl-free-sprites
-  * こちらのスプライトを圧縮して使用しています。Kenney さんありがとう。かわいいです。
+  * こちらのスプライトを圧縮して使用しています。pzUH さんありがとう。かわいいです。
