@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://hp4ljcfknxir" path="res://addons/redscribe/fonts/FiraCode/FiraCode-Regular.ttf" id="3_mx15f"]
 [ext_resource type="Resource" uid="uid://gm8n7vbix8im" path="res://data/editor_themes/momiji_light_theme.tres" id="5_qgmxu"]
 
-[sub_resource type="CodeHighlighter" id="CodeHighlighter_qgmxu"]
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_4qwpp"]
 number_color = Color(1, 0.2784314, 0.21176471, 1)
 symbol_color = Color(0.3019608, 0.69803923, 0.5764706, 1)
 function_color = Color(0.95686275, 0.25882354, 0.58431375, 1)
@@ -63,42 +63,6 @@ grow_vertical = 2
 theme = ExtResource("1_nqnqo")
 script = ExtResource("1_0kj61")
 
-[node name="TopBar" type="MarginContainer" parent="."]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 16
-
-[node name="MenuBar" type="MenuBar" parent="TopBar"]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="FileMenuButton" type="MenuButton" parent="TopBar/MenuBar"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -19.0
-offset_right = 31.0
-offset_bottom = 6.0
-grow_vertical = 0
-text = "File"
-item_count = 6
-popup/item_0/text = "New"
-popup/item_0/id = 0
-popup/item_1/text = "Open"
-popup/item_1/id = 1
-popup/item_2/text = "Save"
-popup/item_2/id = 2
-popup/item_3/text = "Save As"
-popup/item_3/id = 3
-popup/item_4/id = 90
-popup/item_4/separator = true
-popup/item_5/text = "Quit"
-popup/item_5/id = 4
-
 [node name="Editor" parent="." instance=ExtResource("1_y1xsr")]
 unique_name_in_owner = true
 layout_mode = 2
@@ -106,25 +70,8 @@ theme_override_colors/caret_color = Color(1, 0.2784314, 0.21176471, 1)
 theme_override_colors/font_color = Color(0.7647059, 0.1254902, 0.07058824, 1)
 theme_override_colors/background_color = Color(0.9647059, 0.9411765, 0.9098039, 1)
 theme_override_fonts/font = ExtResource("3_mx15f")
-syntax_highlighter = SubResource("CodeHighlighter_qgmxu")
+syntax_highlighter = SubResource("CodeHighlighter_4qwpp")
 current_theme = ExtResource("5_qgmxu")
 
-[node name="OpenFileDialog" type="FileDialog" parent="."]
-unique_name_in_owner = true
-oversampling_override = 1.0
-title = "Open a File"
-initial_position = 2
-file_mode = 0
-access = 2
-use_native_dialog = true
-
-[node name="SaveFileDialog" type="FileDialog" parent="."]
-unique_name_in_owner = true
-oversampling_override = 1.0
-initial_position = 2
-access = 2
-use_native_dialog = true
-
+[connection signal="focus_entered" from="Editor" to="." method="_on_editor_focus_entered"]
 [connection signal="text_changed" from="Editor" to="." method="_on_editor_text_changed"]
-[connection signal="file_selected" from="OpenFileDialog" to="." method="_on_open_file_dialog_file_selected"]
-[connection signal="file_selected" from="SaveFileDialog" to="." method="_on_save_file_dialog_file_selected"]
