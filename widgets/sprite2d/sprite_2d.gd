@@ -1,6 +1,6 @@
 extends Node2D
 
-const MAX_WIDTH = 1080
+const MAX_HEIGHT = 1080
 
 
 func _ready() -> void:
@@ -8,8 +8,8 @@ func _ready() -> void:
 
 
 func _on_size_changed() -> void:
-	var width = get_viewport().size.x
-	scale = Vector2(1, 1) * width / (MAX_WIDTH * ProjectSettings.get('display/window/stretch/scale'))
+	var height = get_viewport().size.y
+	scale = Vector2(1, 1) * height * 2 / (MAX_HEIGHT * ProjectSettings.get('display/window/stretch/scale'))
 
 
 func _input(event: InputEvent) -> void:
