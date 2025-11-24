@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://drecnuminwuy3"]
+[gd_scene load_steps=8 format=3 uid="uid://drecnuminwuy3"]
 
 [ext_resource type="Script" uid="uid://by3sxqdf4qon8" path="res://src/editor_area/editor_area.gd" id="1_0kj61"]
 [ext_resource type="Theme" uid="uid://fydcexr46dmu" path="res://themes/default.tres" id="1_nqnqo"]
 [ext_resource type="PackedScene" uid="uid://c4um2sg1dyj6c" path="res://addons/redscribe/src/editor/editor.tscn" id="1_y1xsr"]
 [ext_resource type="FontFile" uid="uid://hp4ljcfknxir" path="res://addons/redscribe/fonts/FiraCode/FiraCode-Regular.ttf" id="3_mx15f"]
+[ext_resource type="Resource" uid="uid://cu047gcfs6g71" path="res://data/editor_syntaxes/ruby_syntax.tres" id="5_4qwpp"]
 [ext_resource type="Resource" uid="uid://gm8n7vbix8im" path="res://data/editor_themes/momiji_light_theme.tres" id="5_qgmxu"]
 
-[sub_resource type="CodeHighlighter" id="CodeHighlighter_4qwpp"]
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_j0lld"]
 number_color = Color(1, 0.2784314, 0.21176471, 1)
 symbol_color = Color(0.3019608, 0.69803923, 0.5764706, 1)
 function_color = Color(0.95686275, 0.25882354, 0.58431375, 1)
@@ -70,7 +71,8 @@ theme_override_colors/caret_color = Color(1, 0.2784314, 0.21176471, 1)
 theme_override_colors/font_color = Color(0.7647059, 0.1254902, 0.07058824, 1)
 theme_override_colors/background_color = Color(0.9647059, 0.9411765, 0.9098039, 1)
 theme_override_fonts/font = ExtResource("3_mx15f")
-syntax_highlighter = SubResource("CodeHighlighter_4qwpp")
+syntax_highlighter = SubResource("CodeHighlighter_j0lld")
+current_syntax = ExtResource("5_4qwpp")
 current_theme = ExtResource("5_qgmxu")
 
 [connection signal="focus_entered" from="Editor" to="." method="_on_editor_focus_entered"]

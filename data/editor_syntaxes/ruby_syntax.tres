@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="ReDScribeEditorSyntax" load_steps=2 format=3 uid="uid://bgane4ws868g8"]
+[gd_resource type="Resource" script_class="ReDScribeEditorSyntax" load_steps=2 format=3 uid="uid://cu047gcfs6g71"]
 
-[ext_resource type="Script" uid="uid://c6crsqt7405r" path="res://addons/redscribe/resources/redscribe_editor_syntax.gd" id="1_rv58v"]
+[ext_resource type="Script" uid="uid://c6crsqt7405r" path="res://addons/redscribe/resources/redscribe_editor_syntax.gd" id="1_1u8o1"]
 
 [resource]
-script = ExtResource("1_rv58v")
+script = ExtResource("1_1u8o1")
 indent_size = 2
 regions = {
 "comment": [["#", ""]],

@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="ReDScribeEditorTheme" load_steps=2 format=3 uid="uid://ckp73hvmxuqqi"]
+[gd_resource type="Resource" script_class="ReDScribeEditorTheme" load_steps=2 format=3 uid="uid://clntyabyefq8v"]
 
-[ext_resource type="Script" uid="uid://dpen4sy4748he" path="res://addons/redscribe/resources/redscribe_editor_theme.gd" id="1_aui2r"]
+[ext_resource type="Script" uid="uid://dpen4sy4748he" path="res://addons/redscribe/resources/redscribe_editor_theme.gd" id="1_0wc5v"]
 
 [resource]
-script = ExtResource("1_aui2r")
+script = ExtResource("1_0wc5v")
 background_color = "#062037"
 foreground_color = "#FFFFFF"
 caret_color = "#FFFFFF"
