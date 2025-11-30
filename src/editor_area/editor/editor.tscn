@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4af5iiu2ylv7"]
+
+[ext_resource type="Theme" uid="uid://fydcexr46dmu" path="res://themes/default.tres" id="1_3m6nd"]
+[ext_resource type="Script" uid="uid://j6txfibdve64" path="res://src/editor_area/editor/editor.gd" id="1_g5ls6"]
+[ext_resource type="PackedScene" uid="uid://c4um2sg1dyj6c" path="res://addons/redscribe/src/editor/editor.tscn" id="2_p2jxh"]
+[ext_resource type="FontFile" uid="uid://hp4ljcfknxir" path="res://addons/redscribe/fonts/FiraCode/FiraCode-Regular.ttf" id="4_bx2um"]
+[ext_resource type="Resource" uid="uid://gm8n7vbix8im" path="res://data/editor_themes/momiji_light_theme.tres" id="4_jjg6b"]
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_3m6nd"]
+number_color = Color(1, 0.2784314, 0.21176471, 1)
+symbol_color = Color(0.3019608, 0.69803923, 0.5764706, 1)
+function_color = Color(0.95686275, 0.25882354, 0.58431375, 1)
+member_variable_color = Color(1, 0.2784314, 0.21176471, 1)
+keyword_colors = {
+"begin": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"break": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"case": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"catch": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"class": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"def": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"do": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"else": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"elsif": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"end": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"extend": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"false": Color(0.08235294, 0.7058824, 0.7058824, 1),
+"for": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"if": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"include": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"initialize": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"module": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"new": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"next": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"nil": Color(0.08235294, 0.7058824, 0.7058824, 1),
+"prepend": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"raise": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"redo": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"require": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"rescue": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"retry": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"return": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"throw": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"true": Color(0.08235294, 0.7058824, 0.7058824, 1),
+"unless": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"until": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"using": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"when": Color(0.92941177, 0.56078434, 0.0627451, 1),
+"while": Color(0.92941177, 0.56078434, 0.0627451, 1)
+}
+color_regions = {
+"\" \"": Color(0.101960786, 0.69411767, 0.0627451, 1),
+"#": Color(0.7411765, 0.654902, 0.5764706, 1),
+"' '": Color(0.101960786, 0.69411767, 0.0627451, 1),
+":  ": Color(1, 0.2784314, 0.21176471, 1)
+}
+
+[node name="Editor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_3m6nd")
+script = ExtResource("1_g5ls6")
+
+[node name="Content" parent="." instance=ExtResource("2_p2jxh")]
+unique_name_in_owner = true
+layout_mode = 1
+theme_override_colors/caret_color = Color(1, 0.2784314, 0.21176471, 1)
+theme_override_colors/font_color = Color(0.7647059, 0.1254902, 0.07058824, 1)
+theme_override_colors/background_color = Color(0.9647059, 0.9411765, 0.9098039, 1)
+theme_override_fonts/font = ExtResource("4_bx2um")
+syntax_highlighter = SubResource("CodeHighlighter_3m6nd")
+current_theme = ExtResource("4_jjg6b")

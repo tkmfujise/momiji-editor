@@ -3,3 +3,5 @@
 [resource]
 MenuButton/font_sizes/font_size = 12
 PopupMenu/font_sizes/font_size = 12
+TabBar/font_sizes/font_size = 8
+TabContainer/font_sizes/font_size = 8

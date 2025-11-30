@@ -6,17 +6,17 @@ var current : Node
 
 func focus_first() -> void:
 	if all.is_empty(): return
-	var editor = all.filter(func(n): return n != null)
-	if editor: editor[0].focus()
+	var editor_area = all.filter(func(n): return n != null)
+	if editor_area: editor_area[0].focus()
 
 
-func add(editor: Node) -> void:
-	all.push_back(editor)
-	editor.focus_entered.connect(_editor_focused)
+func add(editor_area: Node) -> void:
+	all.push_back(editor_area)
+	editor_area.focus_entered.connect(_editor_focused)
 
 
-func remove(editor: Node) -> void:
-	var idx = all.find(editor)
+func remove(editor_area: Node) -> void:
+	var idx = all.find(editor_area)
 	if idx >= 0: all.remove_at(idx)
 
 
@@ -41,5 +41,5 @@ func save_file_as(path: String) -> void:
 	if current: current.save_file_as(path)
 
 
-func _editor_focused(editor: Node) -> void:
-	current = editor
+func _editor_focused(editor_area: Node) -> void:
+	current = editor_area
